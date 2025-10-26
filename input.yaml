@@ -1,0 +1,35 @@
+elastic:
+  density: 2700.0
+  vp: 6000.0
+  vs: 3464.0
+
+source:
+  M0: 1.0e16
+  fc: 2.0
+  tau: null
+  type: double_couple  #If input moment is not DC, please change the type to custum
+  #type: custum
+
+  mechanism:
+    strike: 135.0
+    dip: 20.0
+    rake: 90.0
+  tensor:                      
+    Mxx: 0.33333
+    Myy: 0.33333
+    Mzz: 0.99999
+    Mxy: 0
+    Mxz: 0
+    Myz: 0
+  location: [0.0, 0.0, 3000.0] #source
+
+stations:
+  ST01: { position: [10000.0, 0.0, 0.0] }
+  ST02: { position: [0.0, 10000.0, 0.0] }
+  ST03: { position: [10000.0, 10000.0, 0.0] }
+  ST04: { position: [-6000.0, -10000.0, 0.0] }
+
+simulation:
+  dt: null
+  duration: null
+
